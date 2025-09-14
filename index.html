@@ -1,1 +1,97 @@
-نبنبنبنب
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>عه</title>
+    <style>
+        body {
+            font-family: 'Vazir', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #f8b500, #fceabb);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        a {
+            color: #0056b3;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #f05a28;
+            border: none;
+            color: white;
+            padding: 14px 40px;
+            font-size: 1.2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(240, 90, 40, 0.5);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #d1430d;
+            transform: scale(1.05);
+        }
+        .message {
+            margin-top: 30px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f05a28;
+            animation: popIn 0.5s ease forwards;
+            display: none;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            a {
+                font-size: 1.1rem;
+            }
+            button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            .message {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="link">تویی که این لینکو باز کردی کلیک کن</a>
+    <button id="btn">کلیک کن</button>
+    <div id="message" class="message">پشت کن😍</div>
+
+    <script>
+        const link = document.getElementById('link');
+        const button = document.getElementById('btn');
+        const message = document.getElementById('message');
+
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('لینک کلیک شد! حالا دکمه پایین را بزن.');
+        });
+
+        button.addEventListener('click', () => {
+            message.style.display = 'block';
+            button.disabled = true;
+            button.style.cursor = 'default';
+        });
+    </script>
+</body>
+</html>
