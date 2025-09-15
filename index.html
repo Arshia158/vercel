@@ -14,15 +14,20 @@
             align-items: center;
             font-family: 'Vazir', Tahoma, sans-serif;
             color: #fff;
-            font-size: 4rem;
             font-weight: 700;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
             user-select: none;
+            padding: 1rem;
+            text-align: center;
+        }
+        .responsive-text {
+            font-size: clamp(2rem, 5vw + 1rem, 6rem);
+            line-height: 1.2;
         }
     </style>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" />
 </head>
 <body>
-    پارسا عشقم کون بده
+    <div class="responsive-text">پارسا عشقم کون بده</div>
 </body>
 </html>
